@@ -3,15 +3,10 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var symbolChar = "!@#$%^&*-+";
 var numberic = "0123456789";
-
-
 var characters = "";
-
-
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
- 
   var passwordLength = prompt("password Length within 8-128 characters");
 
   if (passwordLength < 8 || passwordLength > 128) {
@@ -20,7 +15,7 @@ function generatePassword() {
   } else {
     possiblities();
     var password = "";
-    for (var i = 0; i <passwordLength; i++) {
+    for (var i = 0; i < passwordLength; i++) {
       var randomIndex = Math.floor(Math.random() * characters.length);
       password += characters[randomIndex];
     }
@@ -28,14 +23,13 @@ function generatePassword() {
   }
 }
 
-
 function possiblities() {
   characters = "";
   var lowerCasev2 = confirm("Do you want lowerCase?");
   var upperCasev2 = confirm("Do you want uppercase?");
   var symbolCharv2 = confirm("Do you want symbols?");
   var numbericv2 = confirm("Do you want numbers?");
-  
+
   if (lowerCasev2) {
     characters += lowerCase;
     console.log(characters);
@@ -56,7 +50,7 @@ function possiblities() {
     console.log(characters);
   }
 
-  if (characters ==="") {
+  if (characters === "") {
     alert("Please include one of valid chracter types.");
     possiblities();
   }
@@ -68,5 +62,4 @@ function writePassword() {
   passwordText.value = password;
 }
 
-
- generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);

@@ -99,3 +99,31 @@ You are required to submit the following for review:
 - - -
 © 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
 # Password-Generator
+
+## Overview
+
+* This code allows the user to select multiple characters types. The user will also be able to detirmine long they want their password generated.
+
+## Variables
+
+* 'lowerCase': A string containing lowercase letters.
+* 'upperCase': A string containing uppercase letters.
+* 'symbolChar': A string containing special symbols.
+* 'numeric': A string containing numeric characters.
+* 'characters': An empty string used to store the selected character types for password generation.
+* 'generateBtn': A variable that selects the HTML element with the ID "generate".
+
+## Functions
+
+* 'generatePassword()': This function will promt the user the type the password lenth they wish to have from 8 to 128 characters.  If user enters any number lower than 8 or higher than 128, an alert will pop up "password MUST be within 8-128 characters" and then the user will be required to imput VALID character amount. If user selects a valid input the function "possibilities()' is called upon to assess character types to be in generated password.
+
+* 'possibilities()': A promopt asks the user what character types they would like to include. Users can select to include or not include patricular characters in password.
+
+* 'writePassword()' : calls on 'generatePassword()' function to write a random password inside the 'password' variable. HTML element iD "password" is then updated with users password.
+
+## Event Listener
+
+* Event listened is located at bottom of code and is attached to 'generateBtn' element with a litsener for when you click generate passpassword. 'writePassword()' function is then provoked which will display new generated password.
+
+## Exacution
+* When the user opens the webpage they will be broguht to the generate password page. They will then click the "Generate Password" button which will then prompt the user to enter valid character length followed by characters types they would like involved in generated password. 
